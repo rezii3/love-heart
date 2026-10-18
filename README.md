@@ -57,3 +57,12 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Love Heart ❤
+
+An animated Angular application that builds a glowing heart out of the phrase **"I love you"** across 180 languages (including Georgian `მიყვარხარ`, Japanese, Korean, Chinese, Thai, Hindi, Arabic, Hebrew, Greek, Armenian, and more).
+
+## Running the Project
+
+1. Install dependencies:
+   ```bash
+   npm install

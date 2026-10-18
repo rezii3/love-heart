@@ -1,0 +1,100 @@
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.start-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at center, rgba(25, 0, 8, 0.78) 0%, rgba(0, 0, 0, 0.94) 75%);
+  backdrop-filter: blur(4px);
+}
+
+.start-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 36px 28px;
+
+  .title-glow {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    color: #ff4d6d;
+    text-shadow: 0 0 18px rgba(255, 23, 68, 0.8), 0 0 40px rgba(255, 10, 84, 0.5);
+    margin-bottom: 10px;
+    letter-spacing: 0.04em;
+  }
+
+  .subtitle {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: rgba(255, 194, 209, 0.78);
+    margin-bottom: 34px;
+    letter-spacing: 0.06em;
+  }
+}
+
+.begin-btn {
+  padding: 15px 38px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff0a54 0%, #ff1744 50%, #ff4d6d 100%);
+  border: 1px solid rgba(255, 133, 161, 0.7);
+  border-radius: 999px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 23, 68, 0.75), 0 0 55px rgba(255, 10, 84, 0.45);
+  animation: pulseGlow 2s infinite ease-in-out;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 32px rgba(255, 23, 68, 0.95), 0 0 70px rgba(255, 10, 84, 0.7);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 22px rgba(255, 23, 68, 0.7), 0 0 45px rgba(255, 10, 84, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 34px rgba(255, 77, 109, 0.95), 0 0 75px rgba(255, 23, 68, 0.75);
+  }
+}
+
+.mute-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 30;
+  background: rgba(255, 23, 68, 0.14);
+  border: 1px solid rgba(255, 77, 109, 0.4);
+  color: #ffccd5;
+  padding: 8px 15px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(255, 23, 68, 0.25);
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 23, 68, 0.28);
+    border-color: #ff4d6d;
+    color: #ffffff;
+    box-shadow: 0 0 18px rgba(255, 23, 68, 0.55);
+  }
+}

@@ -1,0 +1,26 @@
+<div class="heart-stage">
+  <canvas #heartCanvas></canvas>
+
+  @if (started) {
+    <div class="bottom-hud">
+      <!-- Subtle current language indicator below the heart -->
+      <div class="language-indicator" [class.visible]="currentLanguage()">
+        <span class="lang-name">{{ currentLanguage() }}</span>
+        @if (currentText()) {
+          <span class="lang-sep">•</span>
+          <span class="lang-phrase">{{ currentText() }}</span>
+        }
+      </div>
+
+      <!-- Replay button to clear the heart and start the animation again -->
+      <button
+        type="button"
+        class="replay-btn"
+        (click)="replay()"
+        title="Replay animation"
+      >
+        ↻ Replay
+      </button>
+    </div>
+  }
+</div>
